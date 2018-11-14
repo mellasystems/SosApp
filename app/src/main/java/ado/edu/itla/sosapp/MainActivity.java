@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import ado.edu.itla.sosapp.entity.Usuario;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "SosApp.MAINACTIVITY";
-    Button btnRegistrar;
+    TextView btnRegistrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "Entrando a SosApp");
         Log.e(TAG, "Esto es un error");
 
-        btnRegistrar = (Button)findViewById(R.id.btnRegistro);
+        btnRegistrar = findViewById(R.id.txt_register);
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

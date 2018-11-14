@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SosApp</string>
+    <string name="especialidad_name">Selecciona una Especialidad</string>
+
+    <string-array name="especialidad_array">
+        <item>Base de Datos</item>
+        <item>Celulares</item>
+        <item>Hardware</item>
+        <item>Software</item>
+    </string-array>
 </resources>
