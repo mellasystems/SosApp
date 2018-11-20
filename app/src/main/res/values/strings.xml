@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">SosApp</string>
-    <string name="especialidad_name">Selecciona una Especialidad</string>
+    <string name="title_login">Inicio de Sesion</string>
+    <string name="text_login">Iniciar</string>
+    <string name="hint_username">Email:</string>
+    <string name="hint_password">Contraseña:</string>
+    <string name="text_register_login">No tienes cuenta? Registrate aqui</string>
+    <string name="title_register">Registro de usuario</string>
+    <string name="hint_name">Nombre completo:</string>
+    <string name="hint_cpassword">Confirme la contraseña:</string>
+    <string name="text_register">Registrar</string>
+    <string name="text_login_register">Estas registrado? Inicia sesion aqui</string>
+
+    <string name="especialidad_name">Especialidad</string>
 
     <string-array name="especialidad_array">
         <item>Base de Datos</item>

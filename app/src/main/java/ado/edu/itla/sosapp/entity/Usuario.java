@@ -4,7 +4,6 @@ public class Usuario {
     //Atributos de la clase
     private int id;
     private String nombre;
-    private String username;
     private String password;
     private String email;
 
@@ -14,19 +13,6 @@ public class Usuario {
     //Metodos de Getter y Setter
     public void setNombre(String nombre){
         this.nombre = nombre;
-    }
-
-    public void setEdad(int edad) throws Exception{
-
-        if(edad<0 || edad>130) {
-            throw new RuntimeException("Error: La edad esta fuera de los parametros.");
-        }
-
-        this.edad = edad;
-    }
-
-    public int getEdad(){
-        return edad;
     }
 
     public int getId() {
@@ -39,14 +25,6 @@ public class Usuario {
 
     public String getNombre() {
         return nombre;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {

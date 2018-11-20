@@ -9,145 +9,100 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Registro de Usuario"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/edtdesign"
-                android:padding="10dp"
-                android:textColorHint="@android:color/white"
-                android:hint="Email:"
-                android:id="@+id/email_reg"
-                android:inputType="textEmailAddress"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/edtdesign"
-                android:padding="10dp"
-                android:textColorHint="@android:color/white"
-                android:hint="Nombre completo:"
-                android:id="@+id/name_reg"
-                android:inputType="textPersonName"
-                />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/edtdesign"
-                android:padding="10dp"
-                android:textColorHint="@android:color/white"
-                android:hint="Contraseña:"
-                android:inputType="textPassword"
-                android:id="@+id/password_reg"
-                />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/edtdesign"
-                android:padding="10dp"
-                android:textColorHint="@android:color/white"
-                android:hint="Confirme la contraseña:"
-                android:inputType="textPassword"
-                android:id="@+id/confpassword_reg"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tipo de Usuario"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="10dp"
-                android:gravity="left"
-                android:layout_marginLeft="20dp"
-                />
-            <RadioGroup
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/btn_tecnico"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Tecnico"
-                    android:textColor="@android:color/white"
-                    android:layout_marginLeft="30dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_register"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
                     />
 
-                <RadioButton
-                    android:id="@+id/btn_normal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Normal"
-                    android:textColor="@android:color/white"
-                    android:layout_marginLeft="30dp"/>
-            </RadioGroup>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edtdesign"
+                        android:padding="10dp"
+                        android:textColorHint="@android:color/white"
+                        android:hint="@string/hint_username"
+                        android:id="@+id/email_reg"
+                        android:inputType="textEmailAddress"
+                    />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edtdesign"
+                        android:padding="10dp"
+                        android:textColorHint="@android:color/white"
+                        android:hint="@string/hint_name"
+                        android:id="@+id/name_reg"
+                        android:inputType="textPersonName"
+                    />
 
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edtdesign"
+                        android:padding="10dp"
+                        android:textColorHint="@android:color/white"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword"
+                        android:id="@+id/password_reg"
+                    />
 
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/edtdesign"
-                android:popupBackground="@drawable/backdesign"
-                android:theme="@style/spinnerTheme"
-                android:padding="10dp"
-                android:prompt="@string/especialidad_name"
-                android:entries="@array/especialidad_array"
-                android:layout_marginLeft="5dp"
-                android:spinnerMode="dropdown" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edtdesign"
+                        android:padding="10dp"
+                        android:textColorHint="@android:color/white"
+                        android:hint="@string/hint_cpassword"
+                        android:inputType="textPassword"
+                        android:id="@+id/confpassword_reg"
+                    />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginBottom="35dp"
-                android:background="@drawable/edtdesign"
-                android:padding="8dp"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"
-                android:text="Registrar"
-                android:id="@+id/btn_register"
-                android:textAppearance="?android:textAppearanceMedium"
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/edtdesign"
+                        android:padding="8dp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:text="@string/text_register"
+                        android:id="@+id/btn_register"
+                        android:textAppearance="?android:textAppearanceMedium"
+                    />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_login_register"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:padding="8dp"
+                        android:id="@+id/txt__login_register"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:layout_marginTop="20dp"
                 />
+                </LinearLayout>
 
+            </ScrollView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="No tienes cuenta? Registrate aqui"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:padding="8dp"
-                android:id="@+id/txt_register"
-                android:textAppearance="?android:textAppearanceSmall"
-                android:layout_marginTop="100dp"
-                />
-        </LinearLayout>
-
-    </ScrollView>
 </LinearLayout>
