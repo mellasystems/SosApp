@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,49 +39,48 @@ public class RegisterActivity extends AppCompatActivity{
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String email = textEmail.getText().toString().trim();
+                String name = textName.getText().toString().trim();
+                String password = textPassword.getText().toString().trim();
+                String confPassword = textConfirmPassword.getText().toString().trim();
 
                 Usuario user = new Usuario();
-                user.setNombre(textName.getText().toString());
-                user.setEmail(textEmail.getText().toString());
-                user.setPassword(textPassword.getText().toString());
+
+                user.setNombre(name);
+                user.setEmail(email);
+                user.setPassword(password);
 
                 try{
-                    Cursor userCursor = usuarioRepositorio.validateEmail
-                            (textEmail.getText().toString());
-                    if (userCursor.getCount() > 0){
-                        Toast.makeText(getApplicationContext(), "El email ya esta en uso!",
-                                Toast.LENGTH_SHORT).show();
-                    }else if(textPassword.getText().toString() == textConfirmPassword.getText().toString()){
 
-                        Log.i(TAG, user.toString());
+                    if(TextUtils.isEmpty(email)){
+                        textEmail.setError("Campo email requerido...");
+                        return;
+                    }
+                    if(TextUtils.isEmpty(name)){
+                        textName.setError("Campo nombre requerido...");
+                        return;
+                    }
+
+
+
+//                    user = usuarioRepositorio.buscar(textEmail.getText().toString().trim());
+//
+//                    if(user != null){
+
                         usuarioRepositorio.guardar(user);
 
-                        if(user.getId() > 0){
-                            Toast.makeText(RegisterActivity.this, "Usuario registrado con exito",
-                                    Toast.LENGTH_SHORT).show();
-                        }
+                        Log.i(TAG, user.toString());
 
-                        textName.setText("");
-                        textEmail.setText("");
-                        textPassword.setText("");
-                        textConfirmPassword.setText("");
-                        textEmail.requestFocus();
-
-                        //volver al login
-                        Intent login = new Intent(RegisterActivity.this,MainActivity.class);
-                        startActivity(login);
-                    }else{
-                        Toast.makeText(RegisterActivity.this, "Password no Coinciden",
+                        Toast.makeText(RegisterActivity.this, "Usuario registrado con exito",
                                 Toast.LENGTH_SHORT).show();
-                        textPassword.setText("");
-                        textConfirmPassword.setText("");
-                        textPassword.requestFocus();
-                    }
+
+                            //volver al login
+                                Intent login = new Intent(RegisterActivity.this,MainActivity.class);
+                                startActivity(login);
 
                 }catch (SQLException e){
                     e.printStackTrace();
                 }
-
 
             }
         });
@@ -94,6 +94,5 @@ public class RegisterActivity extends AppCompatActivity{
             }
         });
     }
-
 
 }

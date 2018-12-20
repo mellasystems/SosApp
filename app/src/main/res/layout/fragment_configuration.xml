@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/backdesign"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        app:cardElevation="5dp"
+        android:elevation="10dp"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="Datos del Usuario"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mi nombre:"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="30dp"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edtdesign"
+                android:padding="10dp"
+                android:textColorHint="@android:color/white"
+                android:id="@+id/descripcion_issues"
+                android:inputType="textPersonName"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Area afin:"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"
+                />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/edtdesign"
+                        android:popupBackground="@drawable/backdesign"
+                        android:padding="1dp"
+                        style="@style/spinnerTheme"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.CoordinatorLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:id="@+id/fab_area_plus"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginRight="20dp"
+                            android:backgroundTint="#162ee2"
+                            app:fabSize="normal"
+                            android:src="@drawable/income"
+                            android:layout_height="wrap_content"
+                            />
+                        </android.support.design.widget.CoordinatorLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:text="Cambiar Password"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/btnborder"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:text="Guardar"
+                        android:drawableLeft="@drawable/save"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/btnsuccess"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

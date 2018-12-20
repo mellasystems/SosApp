@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/backdesign"
+    android:layout_height="match_parent"
+    tools:context=".NewSolicituFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardElevation="5dp"
+        android:elevation="10dp"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="Nueva Solicitud"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titulo:"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="30dp"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edtdesign"
+                android:padding="10dp"
+                android:textColorHint="@android:color/white"
+                android:hint="Titulo"
+                android:id="@+id/titulo_issues"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripcion"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edtdesign"
+                android:padding="10dp"
+                android:textColorHint="@android:color/white"
+                android:hint="Descripcion"
+                android:id="@+id/descripcion_issues"
+                android:inputType="textMultiLine"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Area afin:"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"
+                />
+
+            <Spinner
+                android:id="@+id/sp_area_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edtdesign"
+                android:popupBackground="@drawable/backdesign"
+                android:padding="1dp"
+                android:layout_marginLeft="5dp"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:spinnerMode="dropdown"
+                style="@style/spinnerTheme"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:id="@+id/btn_cancel_new"
+                        android:text="Cancelar"
+                        android:drawableLeft="@drawable/cancel"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/btncancel"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:text="Guardar"
+                        android:id="@+id/btn_guardar_new"
+                        android:drawableLeft="@drawable/save"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/btnsuccess"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

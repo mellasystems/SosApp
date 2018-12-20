@@ -7,9 +7,6 @@ public class Usuario {
     private String password;
     private String email;
 
-    private int edad;
-
-
     //Metodos de Getter y Setter
     public void setNombre(String nombre){
         this.nombre = nombre;
@@ -43,4 +40,13 @@ public class Usuario {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

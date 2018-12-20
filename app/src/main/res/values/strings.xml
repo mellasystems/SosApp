@@ -10,7 +10,8 @@
     <string name="hint_cpassword">Confirme la contraseña:</string>
     <string name="text_register">Registrar</string>
     <string name="text_login_register">Estas registrado? Inicia sesion aqui</string>
-
+    <string name="navigation_drawer_open">Menu de Navegacion</string>
+    <string name="navigation_drawer_close">Menu de Navegacion Close</string>
     <string name="especialidad_name">Especialidad</string>
 
     <string-array name="especialidad_array">
@@ -19,4 +20,8 @@
         <item>Hardware</item>
         <item>Software</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

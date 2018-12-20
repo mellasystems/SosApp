@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/dashboard"
+        android:title="Inicio"
+        android:icon="@drawable/dashboard"/>
+
+    <item android:id="@+id/missolicitudes"
+        android:title="Nueva Solicitud"
+        android:icon="@drawable/missolicitudes"/>
+
+    <item android:id="@+id/solicitudes"
+        android:title="Solicitudes"
+        android:icon="@drawable/solicitudes"/>
+
+    <item android:id="@+id/configuracion"
+        android:title="Configuracion"
+        android:icon="@drawable/cog"/>
+
+    <!--<item android:id="@+id/area"-->
+        <!--android:title="Areas a Fines"/>-->
+
+    <item android:id="@+id/logout"
+        android:title="Cerrar sesion"
+        android:icon="@drawable/logout"/>
+</menu>
